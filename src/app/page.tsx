@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Heart, Utensils, Users, ArrowRight, Shield, Crown, ChevronDown } from "lucide-react";
+import { Heart, Utensils, Users, ArrowRight, Shield, Crown } from "lucide-react";
 import { MissionCard } from "@/components/mission-card";
 import { ImpactCounter } from "@/components/impact-counter";
 import { EmailSignup } from "@/components/email-signup";
@@ -29,9 +29,9 @@ export default function Home() {
             Charlotte
           </p>
 
-          <div className="inline-flex items-center gap-2 bg-card-bg border border-white/10 rounded-full px-5 py-2 mb-8">
-            <Shield className="w-4 h-4 text-gold" />
-            <span className="text-text-body text-sm">
+          <div className="inline-flex items-center gap-2 bg-card-bg border border-white/10 rounded-full px-4 py-2 mb-8 max-w-[90vw]">
+            <Shield className="w-4 h-4 text-gold shrink-0" />
+            <span className="text-text-body text-xs sm:text-sm text-center">
               Founded by Sean Broughton &mdash; Navy Veteran, Single Father,
               Community Servant
             </span>
@@ -49,9 +49,6 @@ export default function Home() {
             </p>
           </div>
 
-          <a href="#photos" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted hover:text-gold transition-colors animate-bounce">
-            <ChevronDown className="w-6 h-6" />
-          </a>
         </div>
       </section>
 

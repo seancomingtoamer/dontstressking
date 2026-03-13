@@ -36,7 +36,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              href="/#signup"
+              href="/#join"
               className="bg-gold hover:bg-gold-dark text-black font-bold px-5 py-2 rounded-lg transition-colors"
             >
               Join the Movement
@@ -66,7 +66,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/#signup"
+                href="/#join"
                 className="bg-gold hover:bg-gold-dark text-black font-bold px-5 py-2 rounded-lg transition-colors text-center"
                 onClick={() => setOpen(false)}
               >
