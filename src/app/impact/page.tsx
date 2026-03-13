@@ -193,7 +193,7 @@ export default function ImpactPage() {
             title="Stay in the Loop"
             subtitle="Get monthly impact reports, volunteer opportunities, and updates on the movement."
           />
-          <EmailSignup />
+          <EmailSignup compact />
         </div>
       </section>
     </div>

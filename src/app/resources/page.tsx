@@ -241,7 +241,7 @@ export default function ResourcesPage() {
             title="Know a Resource We're Missing?"
             subtitle="We're always adding to this list. Join the movement and help us connect more men to the help they need."
           />
-          <EmailSignup />
+          <EmailSignup compact />
         </div>
       </section>
     </div>

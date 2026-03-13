@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Crown, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,13 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/crown-logo.jpg"
-                alt="Don't Stress King"
-                width={32}
-                height={32}
-                className="rounded"
-              />
+              <Crown className="w-6 h-6 text-gold" strokeWidth={1.5} />
               <span className="text-lg font-bold text-white">
                 Don&apos;t Stress <span className="text-gold">King</span>
               </span>
@@ -57,6 +51,15 @@ export function Footer() {
                 className="text-text-body hover:text-gold text-sm transition-colors"
               >
                 dontstressking@agentmail.to
+              </a>
+              <a
+                href="https://www.instagram.com/seancomingtoamerica/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-body hover:text-gold text-sm transition-colors flex items-center gap-2"
+              >
+                <Instagram className="w-4 h-4" />
+                @seancomingtoamerica
               </a>
               <Link
                 href="/#signup"

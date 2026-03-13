@@ -216,7 +216,7 @@ export default function StoryPage() {
             title="Walk With Us"
             subtitle="Join the movement. Get updates on distributions, volunteer events, and how you can make a difference."
           />
-          <EmailSignup />
+          <EmailSignup compact />
         </div>
       </section>
     </div>

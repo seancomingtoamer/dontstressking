@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Heart, Utensils, Users, ArrowRight, Shield } from "lucide-react";
+import { Heart, Utensils, Users, ArrowRight, Shield, Crown, ChevronDown } from "lucide-react";
 import { MissionCard } from "@/components/mission-card";
 import { ImpactCounter } from "@/components/impact-counter";
 import { EmailSignup } from "@/components/email-signup";
@@ -16,15 +16,8 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center max-w-3xl mx-auto">
-          <div className="mb-8 animate-glow-pulse inline-block rounded-2xl">
-            <Image
-              src="/crown-logo.jpg"
-              alt="Don't Stress King Crown Logo"
-              width={160}
-              height={160}
-              className="mx-auto rounded-2xl"
-              priority
-            />
+          <div className="mb-8 inline-block">
+            <Crown className="w-24 h-24 md:w-32 md:h-32 text-gold mx-auto drop-shadow-[0_0_30px_rgba(212,160,23,0.4)]" strokeWidth={1.5} />
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
@@ -44,13 +37,49 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="mb-8">
-            <EmailSignup id="signup" />
+          <div className="flex flex-col items-center gap-4">
+            <a
+              href="#join"
+              className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-black font-bold px-10 py-4 rounded-lg transition-colors text-lg"
+            >
+              Join the Movement <ArrowRight className="w-5 h-5" />
+            </a>
+            <p className="text-text-muted text-sm">
+              100% volunteer-run. Every dollar goes to supplies.
+            </p>
           </div>
 
-          <p className="text-text-muted text-sm">
-            100% volunteer-run. Every dollar goes to supplies.
-          </p>
+          <a href="#photos" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted hover:text-gold transition-colors animate-bounce">
+            <ChevronDown className="w-6 h-6" />
+          </a>
+        </div>
+      </section>
+
+      {/* Photo Strip — emotion first, right after hero */}
+      <section id="photos" className="py-16 px-4 bg-[#141414] scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image src="https://images.pexels.com/photos/5996905/pexels-photo-5996905.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Father and daughter" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-3 left-3 text-white text-sm font-medium">Father Support</p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image src="https://images.pexels.com/photos/6646923/pexels-photo-6646923.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Volunteers giving donations" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-3 left-3 text-white text-sm font-medium">Community Outreach</p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image src="https://images.pexels.com/photos/6623802/pexels-photo-6623802.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Father playing with children" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-3 left-3 text-white text-sm font-medium">Fatherhood</p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image src="https://images.pexels.com/photos/4238994/pexels-photo-4238994.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hygiene supplies" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-3 left-3 text-white text-sm font-medium">Dignity Kits</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -112,7 +141,7 @@ export default function Home() {
             most.
           </p>
           <a
-            href="#signup"
+            href="#join"
             className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-black font-bold px-8 py-3 rounded-lg transition-colors"
           >
             Join the Movement <ArrowRight className="w-5 h-5" />
@@ -120,12 +149,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-20 px-4 bg-[#141414]">
-        <div className="max-w-xl mx-auto text-center">
+      {/* Full Signup Form */}
+      <section id="join" className="scroll-mt-20 py-20 px-4 bg-[#141414]">
+        <div className="max-w-2xl mx-auto">
           <SectionHeader
             title="Be Part of Something Real"
-            subtitle="Drop your email. We'll keep you posted on distributions, volunteer opportunities, and how you can help."
+            subtitle="Tell us who you are and how you want to help. We'll put you in the right position to make an impact."
           />
           <EmailSignup />
         </div>

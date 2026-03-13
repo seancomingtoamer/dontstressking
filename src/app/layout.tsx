@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: "Don't Stress King - Restoring Dignity to Displaced Men & Single Fathers",
   description:
     "A nonprofit movement restoring dignity to displaced men and single fathers in Atlanta & Charlotte. Distributing socks, hygiene kits, and meals at shelters. Founded by Sean Broughton, Navy Veteran.",
