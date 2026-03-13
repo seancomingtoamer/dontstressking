@@ -73,7 +73,7 @@ export function EmailSignup({ id, compact = false }: EmailSignupProps) {
       <div id={id} className="text-center py-8">
         <CheckCircle className="w-12 h-12 text-gold mx-auto mb-4" />
         <p className="text-2xl font-bold text-white mb-2">
-          Welcome to the movement, King.
+          Welcome to the movement, {firstName}.
         </p>
         <p className="text-text-body">
           Check your inbox for a personal welcome from Sean.
